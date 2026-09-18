@@ -586,7 +586,18 @@ body {
     max-width: 600px;
     margin-bottom: 25px;
 }
+/* ==========================================
+   1. BLUE TAP HIGHLIGHT REMOVE (Mobile Fix)
+   ========================================== */
+* {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none;
+}
 
+button, a, input, select, textarea, .swiper-slide, [role="button"] {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    outline: none;
+}
 /* ==========================================
    2. FORM & TIME SLOT MOBILE OVERFLOW FIX
    ========================================== */
