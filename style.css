@@ -586,3 +586,52 @@ body {
     max-width: 600px;
     margin-bottom: 25px;
 }
+
+/* ==========================================
+   2. FORM & TIME SLOT MOBILE OVERFLOW FIX
+   ========================================== */
+
+.modal, 
+.modal-dialog, 
+.modal-content, 
+.modal-body, 
+form {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden;
+}
+
+form input, 
+form select, 
+form textarea, 
+.form-group, 
+.form-control {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Time Slots Grid (Responsive Layout) */
+.time-slot-container,
+.time-slots-grid,
+.slots-wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(85px, 1fr)) !important; /* Mobile auto-fit */
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.time-slot, 
+.slot-btn, 
+.time-slot-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: nowrap;
+    font-size: 0.85rem; /* Mobile text scale */
+    padding: 8px 4px;
+    text-align: center;
+}
