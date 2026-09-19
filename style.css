@@ -586,6 +586,7 @@ body {
     max-width: 600px;
     margin-bottom: 25px;
 }
+
 /* ==========================================
    1. BLUE TAP HIGHLIGHT REMOVE (Mobile Fix)
    ========================================== */
@@ -598,6 +599,8 @@ button, a, input, select, textarea, .swiper-slide, [role="button"] {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
     outline: none;
 }
+
+
 /* ==========================================
    2. FORM & TIME SLOT MOBILE OVERFLOW FIX
    ========================================== */
@@ -645,4 +648,65 @@ form textarea,
     font-size: 0.85rem; /* Mobile text scale */
     padding: 8px 4px;
     text-align: center;
+}
+
+/* Brand Logo Container */
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+/* Logo Image Wrap & Styling */
+.logo-mark-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-logo-img {
+    height: 45px;          
+    width: auto;          
+    object-fit: contain;
+    display: block;
+}
+
+/* Logo Text Styling (Safety Alignment) */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B151E;       
+    line-height: 1;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.logo-text p {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #B87C4C;       
+    letter-spacing: 1.5px;
+    margin: 3px 0 0 0;
+    text-transform: uppercase;
+}
+
+/* Mobile Screen Responsive Fix */
+@media (max-width: 576px) {
+    .nav-logo-img {
+        height: 38px;      
+    }
+    
+    .logo-text h2 {
+        font-size: 1.2rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.55rem;
+    }
 }
