@@ -725,3 +725,57 @@ img {
     object-fit: cover;
     border-radius: 8px;
 }
+/* ==========================================
+   PERFORMANCE & ACCESSIBILITY FIXES (SAFE)
+   ========================================== */
+
+/* 1. CLS & Image Aspect Ratio Fix */
+.slide-bg-img, 
+.treatment-img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* 2. Touch Target Size Fix (ONLY for Mobile Screens) */
+@media (max-width: 768px) {
+    /* Mobile Nav Links Fix */
+    .nav-menu .nav-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        padding: 10px 16px;
+    }
+
+    /* Buttons Mobile Fix */
+    .btn-primary, 
+    .btn-secondary, 
+    .btn-card {
+        min-height: 44px;
+        padding: 10px 20px;
+    }
+
+    /* Hamburger & Modal Close Icons */
+    .hamburger-btn, 
+    .close-modal-btn {
+        min-width: 44px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* 3. Contrast Fix (Specific To Dark Containers Only) */
+.hero-slider-section p,
+.hero-slider-section .tagline {
+    color: #ffffff;
+}
+
+/* Light Background Sections Paragraph Fix */
+.bg-light p, 
+.bg-white p, 
+.treatment-content p, 
+.achieve-card p {
+    color: #4a4a4a; /* High Contrast Dark Gray for Light BG */
+}
