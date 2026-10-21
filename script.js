@@ -1,20 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const images = document.querySelectorAll('img');
     
-    images.forEach((img, index) => {
-        // 1. Unsplash Images ke URLs automatically WebP & Compressed banao
-        if (img.src.includes('images.unsplash.com') && !img.src.includes('format=webp')) {
-            img.src = img.src + '&format=webp&w=800&q=75';
-        }
-
-        // 2. First image ko chod kar baaki sab par automatic Lazy Loading lagao
-        if (index > 0) {
-            img.setAttribute('loading', 'lazy');
-            img.setAttribute('decoding', 'async');
-        } else {
-            img.setAttribute('fetchpriority', 'high');
-        }
-    });
     // --- 1. Mobile Menu with Back Button Integration ---
     const menuToggle = document.getElementById("menuToggle");
     const navMenu = document.getElementById("navMenu");
