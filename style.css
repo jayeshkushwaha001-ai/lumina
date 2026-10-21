@@ -710,3 +710,18 @@ form textarea,
         font-size: 0.55rem;
     }
 }
+img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Layout shift freeze ho jayega */
+    object-fit: cover;
+    content-visibility: auto; /* Browser scroll ke bina render nahi karega */
+}
+
+/* Treatment Grid Images Fix */
+.treatment-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+}
